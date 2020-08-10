@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Travel App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <section id="trip-box" class="trip-box">
+            <div class="container">
+                <div class="trip-block">
+                    <div class="title">
+                        <h1>Travel App</h1>
+                    </div>
+                    <div class="trip-entry">
+                        <div class="trip-row">
+                            <div class="trip-destination">
+                                <label for="destination">
+                                    <span class="span-text">Where to travel? (type city name)</span>
+                                    <input type="text" id="destination" name="destination">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="trip-row">
+                            <div class="trip-date-start">
+                                <label for="date-start">
+                                    <span class="span-text">Departing</span>
+                                    <input type="date" id="date-start" name="date-start">
+                                </label>
+                            </div>
+                            <div class="trip-date-end">
+                                <label for="date-end">
+                                    <span class="span-text">Returning</span>
+                                    <input type="date" id="date-end" name="date-end">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="trip-search">
+                            <button id="search">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="new-trip" class="new-trip">
+            <div class="container">
+                <div id="new-trip-box" class="new-trip-box">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-text">Travel App 2020</div>
+        </div>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

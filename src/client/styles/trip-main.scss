@@ -1,0 +1,66 @@
+
+.trip-box{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../media/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+    .title {
+        text-align: center;
+        
+        h1 {
+            font-size: 2em;
+            color: rgb(255, 255, 255);  
+            
+            @media (min-width: 768px){
+                font-size: 3em;
+            }
+        }
+    }
+}
+
+.span-text {
+    color: white;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #9e5353;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: red;
+    }
+    
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(5, 5, 5, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 0 5px;
+    font-size: 1.2em;
+    transition: border 0.6s;
+
+
+    &.error {
+        border: 1px solid rgba(247, 62, 117, 0.4);
+    }
+
+    &.valid {
+        border: 1px solid rgba(13, 216, 23, 0.4);
+    }
+}
